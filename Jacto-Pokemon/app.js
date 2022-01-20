@@ -1,4 +1,4 @@
-// DOM Objects
+// Constantes dos objetos
 const mainScreen = document.querySelector('.main-screen');
 const pokeName = document.querySelector('.poke-name');
 const pokeId = document.querySelector('.poke-id');
@@ -13,7 +13,7 @@ const leftButton = document.querySelector('.left-button');
 const rightButton = document.querySelector('.right-button');
 
 
-// constants and variables
+// definindo contantes e variaveis
 const TYPES = [
   'normal', 'fighting', 'flying',
   'poison', 'ground', 'rock',
@@ -26,7 +26,7 @@ let prevUrl = null;
 let nextUrl = null;
 
 
-// Functions
+// Funçoes
 const capitalize = (str) => str[0].toUpperCase() + str.substr(1);
 
 const resetScreen = () => {
@@ -111,7 +111,6 @@ const handleListItemClick = (e) => {
 };
 
 
-// adding event listeners
 leftButton.addEventListener('click', handleLeftButtonClick);
 rightButton.addEventListener('click', handleRightButtonClick);
 for (const pokeListItem of pokeListItems) {
@@ -119,5 +118,4 @@ for (const pokeListItem of pokeListItems) {
 }
 
 
-// initialize App
 fetchPokeList('https://pokeapi.co/api/v2/pokemon?offset=0&limit=20');
